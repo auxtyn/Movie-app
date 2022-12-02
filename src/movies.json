@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Aquaman",
+        "description": "Action movies",
+        "posterURL" : "https://cdn.shopify.com/static/sample-images/garnished.jpeg?width=240&height=360&crop=center",
+        "rating": "5 stars"
+      },
+      {
+        "id": 2,
+        "title": "Creed III",
+        "description": "Action movies",
+        "posterURL" : "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/creed.c_240x360_crop_center.progressive.jpg?v=1667944922",
+        "rating": "5 stars"
+      },
+      {
+        "id": 3,
+        "title": "Wanda Vision",
+        "description": "Bloody",
+        "posterURL" : "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/wandavision.mp_240x360_crop_center.progressive.jpg?v=1614371756",
+        "rating": "5 stars"
+      }
+]
