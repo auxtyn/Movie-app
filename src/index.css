@@ -10,11 +10,12 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  /* font-family: 'Gloock', serif; */
   font-family: 'Philosopher', sans-serif;
-  /* font-family: 'Tilt Neon', sans-serif;
-  font-family: 'Tilt Warp', sans-serif; */
-
+}
+.about{
+  color: #fff;
+  background-image: url('../public/images/pexels-bg copy.jpg');
+  height: 350px;
 }
 
 .navbar-brand {
@@ -25,6 +26,9 @@ body {
   font-size: 1.2rem;
   color: white;
 }
+.navbar-toggler {
+  background-color:#0dcaf0 ;
+}
 .carousel{
   margin-top: 5rem;
 }
@@ -34,13 +38,12 @@ body {
 
 }
 .card:hover{
-  transform: scale(.9);
-  transition: ease 100ms;
+  transform: scale(.95);
+  transition: ease 1000ms;
 }
 
 
 .movie-card {
-  /* display: inline-block; */
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -50,16 +53,9 @@ body {
   width: 100%;
   border-radius: 5px;
 }
-
 .movie-card-outer {
-  /* background: #000; */
   display: inline-block;
 }
-.about{
-  /* background-image: url('../public/images/pexels-bg.jpg'); */
- background-color: #3a4c50;
-}
-
 .btn {
   display: inline-block;
   background: #000;
@@ -74,18 +70,9 @@ body {
   font-family: inherit;
 }
 
-.btn:focus {
-  outline: none;
-}
 
-.btn:active {
-  transform: scale(0.98);
-}
 
-.btn:hover {
-  background-color: red;
-  color: white
-}
+
 
 .btn-block {
   display: block;
@@ -102,7 +89,6 @@ body {
 .task.reminder {
   border-left: 5px solid green;
 }
-
 .task h3 {
   display: flex;
   align-items: center;
@@ -155,7 +141,3 @@ footer {
   text-align: center;
 }
 
-
-.card img {
-  /* width: 50%; */
-}

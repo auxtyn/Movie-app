@@ -1,11 +1,11 @@
 import MovieCard from './MovieCard'
-import AddMovie from './AddMovie'
+// import AddMovie from './AddMovie'
 import axios from 'axios'
 import Carousel from './Carousel'
 import { useState, useEffect } from 'react'
 import Hero from './Hero'
 import Single from './Single'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=32434d8aedd8cdecaf3b72ebaca02f48'
 
@@ -35,11 +35,11 @@ const Home = () => {
         setMovies(movies.filter((movie) => movie.vote_average >= 7))
     }
 
-    const addMovie = (movie) => {
-        const id = Math.floor(Math.random() * 10000) + 1
-        const newMov = { id, ...movie }
-        setMovies([...movies, newMov])
-    }
+    // const addMovie = (movie) => {
+    //     const id = Math.floor(Math.random() * 10000) + 1
+    //     const newMov = { id, ...movie }
+    //     setMovies([...movies, newMov])
+    // }
     return (
         <div>
             <div className="text-center">
@@ -47,7 +47,7 @@ const Home = () => {
                 <Carousel />
                 <Hero />
 
-                <AddMovie onAdd={addMovie} />
+                {/* <AddMovie onAdd={addMovie} /> */}
                 <br></br>
 
                 <button onClick={filterRating} className='btn text-center btn-info'>Highest rated movies</button>
@@ -63,7 +63,6 @@ const Home = () => {
             </div>
 
             <Routes>
-                
                 <Route path="/single" element={<Single />} />
             </Routes>
         </div>
