@@ -39,7 +39,7 @@ body {
 }
 .card:hover{
   transform: scale(.95);
-  transition: ease 1000ms;
+  transition: ease 10ms;
 }
 
 
