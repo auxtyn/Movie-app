@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 
 
 const MovieCard = ({ movie, deleteMovie }) => {
@@ -17,31 +16,31 @@ const MovieCard = ({ movie, deleteMovie }) => {
             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">
               See more
             </button>
-
-          
-
           </div>
         </div>
-          {/* Modal   */}
-          <div className="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h1 className="modal-title fs-5" id="exampleModal1Label">{movie.title}</h1>
-                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div className="modal-body">
-                    <img className="w-100" src={API_IMG + movie.poster_path} alt={movie.title} />
-                    <p className="pt-4">{movie.overview}</p>
-                    <h6 className="text-warning">Original_language: {movie.original_language}</h6>
-                  </div>
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
+        {/* Modal   */}
+        <div className="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModal1Label">{movie.title}</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body">
+                <img className="w-50" src={API_IMG + movie.poster_path} alt={movie.title} />
+                <p className="pt-4">{movie.overview}</p>
+                <h6 className="text-warning">Language: {movie.original_language}</h6>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
-            {/* Modal  Ends */}
+          </div>
+        </div>
+        {/* Modal  Ends */}
+
+
+        
       </div>
 
 
