@@ -27,7 +27,7 @@ const MovieCard = ({ movie, deleteMovie, index }) => {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div className="modal-body">
-                <img className="w-50" src={API_IMG + movie.poster_path} alt={movie.title} />
+                <img className="w-100" src={API_IMG + movie.poster_path} alt={movie.title} />
                 <p className="pt-4">{movie.overview}</p>
                 <h6 className="text-warning">Language: {movie.original_language}</h6>
               </div>
@@ -38,16 +38,8 @@ const MovieCard = ({ movie, deleteMovie, index }) => {
           </div>
         </div>
         {/* Modal  Ends */}
-
-
-        
       </div>
-
-
     </>
-
-
-
   )
 }
 
