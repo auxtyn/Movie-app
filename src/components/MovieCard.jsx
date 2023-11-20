@@ -1,6 +1,6 @@
 
 
-const MovieCard = ({ movie, deleteMovie }) => {
+const MovieCard = ({ movie, deleteMovie, index }) => {
   const API_IMG = 'https://image.tmdb.org/t/p/original/';
 
   return (
@@ -13,13 +13,13 @@ const MovieCard = ({ movie, deleteMovie }) => {
             <h6>{movie.title}</h6>
             <p className='text-warning'>Rating:{movie.vote_average}</p>
             {/* <button onClick={() => deleteMovie(movie.id)} className='btn text-center btn-damger'>Delete movie</button> */}
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target=`#exampleModal${index}`>
               See more
             </button>
           </div>
         </div>
         {/* Modal   */}
-        <div className="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+        <div className="modal fade" id=`exampleModal${index}` tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
