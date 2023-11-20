@@ -1,20 +1,16 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Nav = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar</a>
+        <nav className="navbar navbar-expand-lg bg-info fixed-top py-4 mb-5">
+            <div className="container-fluid container">
+                <Link className="navbar-brand" to=""> <span className=''>HotMovies</span></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                    <span className="navbar-toggler-icon"></span> </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Features</a>
+                            <Link className="nav-link" aria-current="page" to="/About">About us</Link>
                         </li>
                     </ul>
                 </div>

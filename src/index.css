@@ -6,11 +6,38 @@
   padding: 0;
 }
 
+
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-x:hidden
+  overflow-x: hidden;
+  /* font-family: 'Gloock', serif; */
+  font-family: 'Philosopher', sans-serif;
+  /* font-family: 'Tilt Neon', sans-serif;
+  font-family: 'Tilt Warp', sans-serif; */
 
 }
+
+.navbar-brand {
+  font-weight: bolder!important;
+  color: #000;
+}
+.nav-link{
+  font-size: 1.2rem;
+  color: white;
+}
+.carousel{
+  margin-top: 5rem;
+}
+.nav-link:hover{
+  font-size: 1.1rem;
+  color: #000;
+
+}
+.card:hover{
+  transform: scale(.9);
+  transition: ease 100ms;
+}
+
 
 .movie-card {
   /* display: inline-block; */
@@ -18,14 +45,19 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.movie-card img{
+
+.movie-card img {
   width: 100%;
   border-radius: 5px;
 }
-.movie-card-outer{
+
+.movie-card-outer {
   /* background: #000; */
   display: inline-block;
-
+}
+.about{
+  /* background-image: url('../public/images/pexels-bg.jpg'); */
+ background-color: #3a4c50;
 }
 
 .btn {
@@ -50,9 +82,9 @@ body {
   transform: scale(0.98);
 }
 
-.btn:hover{
-  background-color:red;
-  color:white
+.btn:hover {
+  background-color: red;
+  color: white
 }
 
 .btn-block {
@@ -111,7 +143,8 @@ body {
   flex: 2;
   height: 20px;
 }
-form{
+
+form {
   border: 3px solid cyan;
   border-radius: 10px;
   margin: 10px;
@@ -123,6 +156,6 @@ footer {
 }
 
 
-.card img{
+.card img {
   /* width: 50%; */
 }
