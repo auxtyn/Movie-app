@@ -55,8 +55,8 @@ const Home = () => {
 
                 <div className='container'>
                     {movies.length > 0 ?
-                        movies.map((movie) => (
-                            <MovieCard className="col-md-4" movie={movie} deleteMovie={deleteMovie} key={movie.id} />
+                        movies.map((movie, index) => (
+                            <MovieCard className="col-md-4" movie={movie} deleteMovie={deleteMovie} key={movie.id} index={index} />
                         ))
                         : <p className='text-danger'>No movies to view</p>}
                 </div>

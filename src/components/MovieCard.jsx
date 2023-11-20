@@ -13,13 +13,13 @@ const MovieCard = ({ movie, deleteMovie, index }) => {
             <h6>{movie.title}</h6>
             <p className='text-warning'>Rating:{movie.vote_average}</p>
             {/* <button onClick={() => deleteMovie(movie.id)} className='btn text-center btn-damger'>Delete movie</button> */}
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target=`#exampleModal${index}`>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target={`#exampleModal${index}`}>
               See more
             </button>
           </div>
         </div>
         {/* Modal   */}
-        <div className="modal fade" id=`exampleModal${index}` tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id={`exampleModal${index}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
