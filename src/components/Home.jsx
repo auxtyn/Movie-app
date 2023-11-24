@@ -7,7 +7,7 @@ import Hero from './Hero'
 import Single from './Single'
 import { Routes, Route } from 'react-router-dom'
 
-const API_URL = 'https://api.themoviedb.org/3/movi/popular?api_key=32434d8aedd8cdecaf3b72ebaca02f48'
+const API_URL = 'https://api.themov32434d8aedd8cdecaf3b72ebaca02f48'
 
 const Home = () => {
 
