@@ -58,8 +58,8 @@ const Home = () => {
                         movies.map((movie, index) => (
                             <MovieCard className="col-md-4" movie={movie} deleteMovie={deleteMovie} key={movie.id} index={index} />
                         ))
-                        : <div class="lds-hourglass"></div>
-                        // <p className='text-danger'>No movie to view</p>
+                        : 
+                        <p className='text-danger'>No movie to view</p>
                         }
                 </div>
             </div>
