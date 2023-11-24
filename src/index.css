@@ -12,31 +12,76 @@ body {
   overflow-x: hidden;
   font-family: 'Philosopher', sans-serif;
 }
-.about{
+
+.about {
   color: #fff;
   background-image: url('../public/images/pexels-bg copy.jpg');
 }
 
+.spinner {
+  .lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
+}
+
 .navbar-brand {
-  font-weight: bolder!important;
+  font-weight: bolder !important;
   color: #000;
 }
-.nav-link{
+
+.nav-link {
   font-size: 1.2rem;
   color: white;
 }
+
 .navbar-toggler {
-  background-color:#0dcaf0 ;
+  background-color: #0dcaf0;
 }
-.carousel{
+
+.carousel {
   margin-top: 5rem;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   font-size: 1.1rem;
   color: #000;
 
 }
-.card:hover{
+
+.card:hover {
   transform: scale(.95);
   transition: ease 10ms;
 }
@@ -51,9 +96,11 @@ body {
   width: 100%;
   border-radius: 5px;
 }
+
 .movie-card-outer {
   display: inline-block;
 }
+
 .btn {
   display: inline-block;
   background: #000;
@@ -83,6 +130,7 @@ body {
 .task.reminder {
   border-left: 5px solid green;
 }
+
 .task h3 {
   display: flex;
   align-items: center;
@@ -134,4 +182,3 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
-
