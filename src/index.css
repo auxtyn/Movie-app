@@ -5,8 +5,21 @@
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration: none
+}
+.btnn{
+  margin-top: 150px;
+}
+/* .input-form{
+  display: flex;
+} */
+.form{
+  margin-top: 300px;
+  /* width: 70%;
+  margin-left: auto; */
 
-
+}
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -25,6 +38,7 @@ body {
   font-size: 1.2rem;
   color: white;
 }
+
 .navbar-toggler {
   background-color:#0dcaf0 ;
 }
@@ -43,7 +57,7 @@ body {
 
 .movie-card {
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 5px 10px;
   /* cursor: pointer; */
 }
 
@@ -56,21 +70,16 @@ body {
 }
 .btn {
   display: inline-block;
-  background: #000;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
-  font-family: inherit;
 }
 
 .btn-block {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .task {
@@ -120,14 +129,19 @@ body {
 }
 
 .form-control-check input {
-  flex: 2;
+  /* flex: 2; */
   height: 20px;
 }
 
 form {
-  border: 3px solid cyan;
-  border-radius: 10px;
+  border-radius: 25px;
   margin: 10px;
+
+}
+.middle{
+  border: 3px solid cyan;
+  border-radius:10px
+
 }
 
 footer {

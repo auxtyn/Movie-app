@@ -1,46 +1,100 @@
+// import { selectMovies } from "../features/movieSlice";
+// import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
+// release date
 
-const MovieCard = ({ movie, deleteMovie, index }) => {
-  const API_IMG = 'https://image.tmdb.org/t/p/original/';
+const MovieCard = ({ data, index }) => {
+  const API_IMG = "https://image.tmdb.org/t/p/original/";
+  const id = data.id
+
+  // const search = useSelector(selectSearch);
+
+  // const filterRating = useSelector(state=> state.movies.movies)
+
+  // const filterRating = useSelector(selectMovies) => {
+  //     movies.filter((movie, index) => movie.vote_average >= 7)
+
+  // };
+  // const rating = filterRating.filter((movie, index) => movie.vote_average >= 7);
+
+  //   const filterRating = useSelector(selectMovies) => {
+  //     movies.filter((movie, index) => movie.vote_average >= 7)
+  //  }
 
   return (
     <>
-      <div className=" movie-card-outer col-md-3 ">
-        <div className="movie-card">
-          <div className="card">
-            <img src={API_IMG + movie.poster_path} alt={movie.title} />
-            <p>{movie.release_date}</p>
-            <h6>{movie.title}</h6>
-            <p className='text-warning'>Rating:{movie.vote_average}</p>
-            {/* <button onClick={() => deleteMovie(movie.id)} className='btn text-center btn-damger'>Delete movie</button> */}
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target={`#exampleModal${index}`}>
-              See more
-            </button>
+      {/* <h1>{movies.length}</h1> */}
+      {/* <button className="btn btn-info" onClick={()=>filterRating)}>Select movies</button> */}
+
+      {/* {const rating = filterRating.filter((movie, index) => movie.vote_average >= 7)} */}
+
+      <div className=" movie-card-outer col-6 col-md-3 ">
+        {/* <h1>{data.length }</h1> */}
+        <Link to={`/single/${id}`}>
+          {/* <Link to={`/single/:index}`}> */}
+          <div className="movie-card">
+            <div className="card">
+              <img src={API_IMG + data.poster_path} alt={data.title} />
+
+              {/* <img  src={API_IMG + data.backdrop_path} alt={data.backdrop_path} /> */}
+
+              <p>{data.release_date}</p>
+              <h6>{data.title}</h6>
+              <p className="text-warning">Rating:{data.vote_average}</p>
+
+              <button
+                type="button"
+                className="btn btn-dark"
+                data-bs-toggle="modal"
+                data-bs-target={`#exampleModal${index}`}
+              >
+                See more
+              </button>
+            </div>
           </div>
-        </div>
-        {/* Modal   */}
-        <div className="modal fade" id={`exampleModal${index}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        </Link>
+        {/* Modal  */}
+        <div
+          className="modal fade"
+          id={`exampleModal${index}`}
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModal1Label">{movie.title}</h1>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 className="modal-title fs-5" id="exampleModal1Label">
+                  {data.title}
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
               <div className="modal-body">
-                <img className="w-100" src={API_IMG + movie.poster_path} alt={movie.title} />
-                <p className="pt-4">{movie.overview}</p>
-                <h6 className="text-warning">Language: {movie.original_language}</h6>
+                <img
+                  className="w-50"
+                  src={API_IMG + data.poster_path}
+                  alt={data.title}
+                />
+
+                <p className="pt-4">{data.overview}</p>
+                <h6 className="text-warning">
+                  Language: {data.original_language}
+                </h6>
               </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Close</button>
-              </div>
+              <div className="modal-footer"></div>
             </div>
           </div>
         </div>
-        {/* Modal  Ends */}
+        {/* Modal  Ends  */}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default MovieCard
+export default MovieCard;
