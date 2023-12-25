@@ -31,10 +31,11 @@ const MovieCard = ({ data, index }) => {
 
       <div className=" movie-card-outer col-6 col-md-3 ">
         {/* <h1>{data.length }</h1> */}
-        <Link to={`/single/${id}`}>
           {/* <Link to={`/single/:index}`}> */}
           <div className="movie-card">
             <div className="card">
+        <Link to={`/single/${id}`}>
+
               <img src={API_IMG + data.poster_path} alt={data.title} />
 
               {/* <img  src={API_IMG + data.backdrop_path} alt={data.backdrop_path} /> */}
@@ -43,21 +44,22 @@ const MovieCard = ({ data, index }) => {
               <h6>{data.title}</h6>
               <p className="text-warning">Rating:{data.vote_average}</p>
 
+              </Link>
+
               <button
                 type="button"
                 className="btn btn-dark"
                 data-bs-toggle="modal"
-                data-bs-target={`#exampleModal${index}`}
+                data-bs-target={`#exampleModal${data.id}`}
               >
                 See more
               </button>
             </div>
           </div>
-        </Link>
         {/* Modal  */}
         <div
           className="modal fade"
-          id={`exampleModal${index}`}
+          id={`exampleModal${data.id}`}
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -65,7 +67,7 @@ const MovieCard = ({ data, index }) => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id={`exampleModal${index}`}>
+                <h1 className="modal-title fs-5" id={`exampleModal${data.id}`}>
                   {data.title}
                 </h1>
                 <button
