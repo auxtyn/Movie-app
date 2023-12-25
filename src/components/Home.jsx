@@ -1,15 +1,13 @@
 import axios from "axios";
 import Carousel from "./Carousel";
 import { useEffect } from "react";
-import Hero from "./Hero";
+// import Hero from "./Hero";
 import { useDispatch } from "react-redux";
 import { setMovies } from "../features/movieSlice";
 import MovieList from "./MovieList";
 import Search from "./Search";
 
-// https://api.themoviedb.org/3/find/572802/external_source=imdb_id?api_key=32434d8aedd8cdecaf3b72ebaca02f48
 
-// api.themoviedb.org/3/find/572802?external_source=imdb_id
 
 const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
 
@@ -26,7 +24,6 @@ const Home = () => {
     });
   }, [dispatch]);
 
-  // Search single movie  https://api.themoviedb.org/3/find/external_id?external_source='
 
   // const deleteMovie = (id) => {
   //   films(movies.filter((movie) => movie.id !== id));
@@ -47,7 +44,6 @@ const Home = () => {
 
         <Carousel />
         <Search />
-        {/* <Hero /> */}
 
         <br></br>
         <div className="container">

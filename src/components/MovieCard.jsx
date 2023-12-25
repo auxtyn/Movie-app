@@ -24,21 +24,15 @@ const MovieCard = ({ data, index }) => {
 
   return (
     <>
-      {/* <h1>{movies.length}</h1> */}
-      {/* <button className="btn btn-info" onClick={()=>filterRating)}>Select movies</button> */}
 
-      {/* {const rating = filterRating.filter((movie, index) => movie.vote_average >= 7)} */}
 
       <div className=" movie-card-outer col-6 col-md-3 ">
-        {/* <h1>{data.length }</h1> */}
-          {/* <Link to={`/single/:index}`}> */}
           <div className="movie-card">
             <div className="card">
         <Link to={`/single/${id}`}>
 
               <img src={API_IMG + data.poster_path} alt={data.title} />
 
-              {/* <img  src={API_IMG + data.backdrop_path} alt={data.backdrop_path} /> */}
 
               <p>{data.release_date}</p>
               <h6>{data.title}</h6>

@@ -33,7 +33,7 @@ const {id} = useParams();
     <>
     {
        <div className="row mt-5 pt-5 bg-dark">
-       <div className="">
+       <div className="text-white">
          {/* <h1>{movie.title}</h1>
          <h2>{movie.vote_average}</h2> */}
          {/* <img src={API_IMG + movie.poster_path} alt="" className="w-50" /> */}
