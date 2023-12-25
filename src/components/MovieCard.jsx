@@ -1,5 +1,4 @@
-// import { selectMovies } from "../features/movieSlice";
-// import { useSelector } from "react-redux";
+
 import { Link } from "react-router-dom";
 
 // release date
