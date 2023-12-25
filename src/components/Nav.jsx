@@ -26,12 +26,12 @@ const Nav = () => {
                 About us
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <form action="" className='d-flex'>
                 <input className='form-control' placeholder="search movies" type="search" />
                 <button className='btn btn-info'>send</button>
               </form>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

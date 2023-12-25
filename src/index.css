@@ -14,11 +14,17 @@ a{
 /* .input-form{
   display: flex;
 } */
+.bg-grey{
+  background-color: #F0F1F3;
+  padding: 20px;
+}
 .form{
-  margin-top: 300px;
-  /* width: 70%;
-  margin-left: auto; */
-
+  /* margin-top: 300px; */
+   width: 70%;
+  margin-left: auto;
+}
+input, form{
+  border-radius: 20%;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -104,6 +110,7 @@ body {
 
 .form-control {
   margin: 20px 0;
+  border-radius: 20px;
 }
 
 .form-control label {

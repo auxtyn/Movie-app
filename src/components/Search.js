@@ -31,20 +31,22 @@ const Search = () => {
 
   return (
     <>
-      <form className="form" onSubmit={submitHandler}>
+    <div className="bg-grey">
+      <form className="form " onSubmit={submitHandler}>
         <div className="input-form">
           <input
-            className="form-control"
-            placeholder="search fav movies"
+            className="form-control text-center w-50"
+            placeholder="search fav movies U+&#x2630"
             name="query"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           ></input>
           <div>
-            <button className="btn btn-info form-btn text-white">Search</button>
+            {/* <button className="btn btn-info form-btn text-white">Search</button> */}
           </div>
         </div>
       </form>
+      </div>
 
       {searchMovies.map((movies) => (
         <h2>Title of movie{movies.title}</h2>

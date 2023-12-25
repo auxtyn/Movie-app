@@ -44,10 +44,10 @@ const Home = () => {
   return (
     <div>
       <div className="text-center">
-        <Search />
 
         <Carousel />
-        <Hero />
+        <Search />
+        {/* <Hero /> */}
 
         <br></br>
         <div className="container">
