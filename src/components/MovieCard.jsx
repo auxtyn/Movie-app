@@ -65,7 +65,7 @@ const MovieCard = ({ data, index }) => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModal1Label">
+                <h1 className="modal-title fs-5" id={`exampleModal${index}`}>
                   {data.title}
                 </h1>
                 <button
