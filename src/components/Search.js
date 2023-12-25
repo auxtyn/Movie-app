@@ -36,11 +36,12 @@ const Search = () => {
         <div className="input-form">
           <input
             className="form-control text-center w-50"
-            placeholder="search fav movies U+&#x2630"
+            placeholder="search movies "
             name="query"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           ></input>
+          {/* <i className="fa fa-search fa-2x"></i> */}
           <div>
             {/* <button className="btn btn-info form-btn text-white">Search</button> */}
           </div>
