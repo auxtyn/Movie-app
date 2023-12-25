@@ -37,7 +37,7 @@ const Search = () => {
           <input
             className="form-control text-center w-50"
             placeholder="search movies "
-            name="query"
+            name="query" 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           ></input>
