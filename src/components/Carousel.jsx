@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { selectMovies } from "../features/movieSlice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Carousel = () => {
   let movie = useSelector(selectMovies);
+  const dispatch = useDispatch()
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
   // console.log(API_IMG + movie[0].poster_path)
   // console.log(API_IMG + movie[0].poster_path)
+
+
+
+
 
   return (
     <>
@@ -17,7 +22,7 @@ const Carousel = () => {
         className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner">
+        {/* <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="1000">
             <div className=" col-md-12">
               <img
@@ -89,7 +94,7 @@ const Carousel = () => {
             ></span>
             <span className="visually-hidden">Next</span>
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );
