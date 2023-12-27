@@ -1,18 +1,31 @@
-import React  from 'react';
-import { selectMovies } from "../features/movieSlice";
-import { useSelector } from "react-redux";
+import React from "react";
+// import { selectBackdrop, setBackdrop } from "../features/movieSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import axios from "axios";
 
 const Carousel = () => {
-  const movie = useSelector(selectMovies);
+  // const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
-  // console.log(API_IMG + movie[0].poster_path)
-  // console.log(API_IMG + movie[0].poster_path)
+  const images = [
+    {
+      backdrop_path: API_IMG + "jXJxMcVoEuXzym3vFnjqDW4ifo6.jpg",
+      poster_path: API_IMG + "8xV47NDrjdZDpkVcCFqkdHa3T0C.jpg",
+    },
+    
+    {
+      backdrop_path: API_IMG + "5a4JdoFwll5DRtKMe7JLuGQ9yJm.jpg",
+      poster_path: API_IMG + "ePquoeNxJ6vg8U7iSjRAZ2KdztX.jpg",
+    },
 
-   // "@babel/plugin-transform-private-property-in-object":"7.21.11",
+    {
+      backdrop_path: API_IMG + "gg4zZoTggZmpAQ32qIrP5dtnkEZ.jpg",
+      poster_path: API_IMG + "tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg",
+    },
+  ];
 
-
+  // console.log(images[0].backdrop_path);
 
   return (
     <>
@@ -21,16 +34,16 @@ const Carousel = () => {
         className="carousel slide"
         data-bs-ride="carousel"
       >
-        {/* <div className="carousel-inner">
+        <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="1000">
             <div className=" col-md-12">
               <img
-                src={API_IMG + movie[0].backdrop_path}
-                className="d-none d-md-block w-100 " 
+                src={images[0].backdrop_path}
+                className="d-none d-md-block w-100 "
                 alt="..."
               />
               <img
-                src={API_IMG + movie[0].poster_path}
+                src={images[0].poster_path}
                 className="d-md-none d-sm-block  w-100"
                 alt="..."
               />
@@ -38,36 +51,34 @@ const Carousel = () => {
           </div>
 
           <div className="carousel-item" data-bs-interval="2000">
+            <div className=" col-md-12">
+              <img
+                src={images[1].backdrop_path}
+                className="d-none d-md-block w-100 "
+                alt="..."
+              />
+              <img
+                src={images[1].poster_path}
+                className="d-md-none d-sm-block  w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div className="carousel-item" data-bs-interval="1000">
+            <div className="col-md-12">
               <div className=" col-md-12">
                 <img
-                  src={API_IMG + movie[1].backdrop_path}
-                  className="d-none d-md-block w-100 " 
+                  src={images[2].backdrop_path}
+                  className="d-none d-md-block w-100 "
                   alt="..."
                 />
                 <img
-                  src={API_IMG + movie[1].poster_path}
+                  src={images[2].poster_path}
                   className="d-md-none d-sm-block  w-100"
                   alt="..."
                 />
               </div>
             </div>
-            
-            <div className="carousel-item" data-bs-interval="1000">
-              <div className="col-md-12">
-                <div className=" col-md-12">
-                  <img
-                    src={API_IMG + movie[2].backdrop_path}
-                    className="d-none d-md-block w-100 " 
-                    alt="..."
-                  />
-                  <img
-                    src={API_IMG + movie[2].poster_path}
-                    className="d-md-none d-sm-block  w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-
           </div>
           <button
             className="carousel-control-prev"
@@ -93,7 +104,7 @@ const Carousel = () => {
             ></span>
             <span className="visually-hidden">Next</span>
           </button>
-        </div> */}
+        </div>
       </div>
     </>
   );

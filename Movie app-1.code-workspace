@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Movie app",
+			"path": "."
+		},
+		{
+			"name": "node_modules",
+			"path": "../../../redux-movie-app/node_modules"
+		}
+	],
+	"settings": {}
+}
