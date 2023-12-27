@@ -8,7 +8,7 @@ const Carousel = () => {
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
   console.log(API_IMG + movie[0].poster_path)
-  // console.log(API_IMG + movie[0].poster_path)
+  // console.log(API_IMG + movie[0].poster_path) 
 
   return (
     <>
