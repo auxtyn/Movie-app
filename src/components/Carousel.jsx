@@ -22,7 +22,7 @@ const Carousel = () => {
             <div className=" col-md-12">
               <img
                 src={API_IMG + movie[0].backdrop_path}
-                className="d-none d-md-block w-100 "
+                className="d-none d-md-block w-100 " 
                 alt="..."
               />
               <img
@@ -37,7 +37,7 @@ const Carousel = () => {
               <div className=" col-md-12">
                 <img
                   src={API_IMG + movie[1].backdrop_path}
-                  className="d-none d-md-block w-100 "
+                  className="d-none d-md-block w-100 " 
                   alt="..."
                 />
                 <img
@@ -53,7 +53,7 @@ const Carousel = () => {
                 <div className=" col-md-12">
                   <img
                     src={API_IMG + movie[2].backdrop_path}
-                    className="d-none d-md-block w-100 "
+                    className="d-none d-md-block w-100 " 
                     alt="..."
                   />
                   <img
@@ -63,7 +63,6 @@ const Carousel = () => {
                   />
                 </div>
               </div>
-            {/* </div> */}
           </div>
           <button
             className="carousel-control-prev"
