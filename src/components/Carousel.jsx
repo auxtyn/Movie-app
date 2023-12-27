@@ -2,7 +2,7 @@ import { selectMovies } from "../features/movieSlice";
 import { useSelector } from "react-redux";
 
 const Carousel = () => {
-  let movie = useSelector(selectMovies);
+  const movie = useSelector(selectMovies);
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
