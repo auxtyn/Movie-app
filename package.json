@@ -1,10 +1,9 @@
 {
-  "name": "react-task-tracker",
+  "name": "react-movie-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
-    "@babel/plugin-transform-private-property-in-object":"7.21.11",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -16,7 +15,7 @@
     "react-redux": "^8.1.3",
     "react-router": "^6.19.0",
     "react-router-dom": "^6.19.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

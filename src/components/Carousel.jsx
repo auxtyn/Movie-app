@@ -9,7 +9,7 @@ const Carousel = () => {
   // console.log(API_IMG + movie[0].poster_path)
   // console.log(API_IMG + movie[0].poster_path)
 
-
+   // "@babel/plugin-transform-private-property-in-object":"7.21.11",
 
 
 
