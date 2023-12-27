@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Carousel = () => {
   let movie = useSelector(selectMovies);
-  const dispatch = useDispatch()
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
