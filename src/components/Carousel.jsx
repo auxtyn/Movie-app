@@ -7,8 +7,8 @@ const Carousel = () => {
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
-  // console.log(API_IMG + movie[0].poster_path)
-  // console.log(API_IMG + movie[0].poster_path) 
+  // console.log((API_IMG + movie[0].poster_path))
+  // console.log((API_IMG + movie[0].poster_path))
 
   return (
     <>
@@ -21,12 +21,12 @@ const Carousel = () => {
           <div className="carousel-item active" data-bs-interval="1000">
             <div className=" col-md-12">
               <img
-                src={API_IMG + movie[0].backdrop_path}
+                src={(API_IMG + movie[0].backdrop_path)}
                 className="d-none d-md-block w-100 " 
                 alt="..."
               />
               <img
-                src={API_IMG + movie[0].poster_path}
+                src={(API_IMG + movie[0].poster_path)}
                 className="d-md-none d-sm-block  w-100"
                 alt="..."
               />
@@ -36,12 +36,12 @@ const Carousel = () => {
           <div className="carousel-item" data-bs-interval="2000">
               <div className=" col-md-12">
                 <img
-                  src={API_IMG + movie[1].backdrop_path}
+                  src={(API_IMG + movie[1].backdrop_path)}
                   className="d-none d-md-block w-100 " 
                   alt="..."
                 />
                 <img
-                  src={API_IMG + movie[1].poster_path}
+                  src={(API_IMG + movie[1].poster_path)}
                   className="d-md-none d-sm-block  w-100"
                   alt="..."
                 />
@@ -52,17 +52,18 @@ const Carousel = () => {
               <div className="col-md-12">
                 <div className=" col-md-12">
                   <img
-                    src={API_IMG + movie[2].backdrop_path}
+                    src={(API_IMG + movie[2].backdrop_path)}
                     className="d-none d-md-block w-100 " 
                     alt="..."
                   />
                   <img
-                    src={API_IMG + movie[2].poster_path}
+                    src={(API_IMG + movie[2].poster_path)}
                     className="d-md-none d-sm-block  w-100"
                     alt="..."
                   />
                 </div>
               </div>
+
           </div>
           <button
             className="carousel-control-prev"
