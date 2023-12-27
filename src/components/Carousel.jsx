@@ -17,7 +17,7 @@ const Carousel = () => {
         className="carousel slide"
         data-bs-ride="carousel"
       >
-        {/* <div className="carousel-inner">
+        <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="1000">
             <div className=" col-md-12">
               <img
@@ -89,7 +89,7 @@ const Carousel = () => {
             ></span>
             <span className="visually-hidden">Next</span>
           </button>
-        </div> */}
+        </div>
       </div>
     </>
   );
