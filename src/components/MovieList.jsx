@@ -8,7 +8,6 @@ const MovieList = () => {
 
   return (
     <>
-    {/* <h1>{movies.length}</h1> */}
 
       {movies.map((movie, index) => <MovieCard key={index} data={movie} />)}
     </>

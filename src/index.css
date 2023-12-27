@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-../public/images/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,9 +10,7 @@ a{
 .btnn{
   margin-top: 150px;
 }
-/* .input-form{
-  display: flex;
-} */
+
 .bg-grey{
   background-color: #F0F1F3;
   padding: 20px;
@@ -54,13 +51,11 @@ a{
   background: #c9c9c9!important;
   color: #000!important;
 }
-/* .form input:[placeholder]{
- 
-  color: #fff;
-} */
+
 
 .form input::placeholder{
   color: #fff;
+  
 
 }
 
@@ -105,7 +100,7 @@ body {
 .movie-card {
   margin: 5px;
   border-radius: 5px 10px;
-  /* cursor: pointer; */
+
 }
 
 .movie-card img {
@@ -126,7 +121,7 @@ body {
 
 .btn-block {
   display: block;
-  /* width: 100%; */
+
 }
 
 .task {
@@ -177,7 +172,6 @@ body {
 }
 
 .form-control-check input {
-  /* flex: 2; */
   height: 20px;
 }
 
@@ -196,4 +190,3 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
-

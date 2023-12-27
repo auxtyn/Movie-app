@@ -1,7 +1,6 @@
 import axios from "axios";
 import Carousel from "./Carousel";
 import React, { useEffect } from "react";
-// import Hero from "./Hero";
 import { useDispatch } from "react-redux";
 import { setMovies } from "../features/movieSlice";
 import MovieList from "./MovieList";
@@ -19,7 +18,7 @@ const Home = () => {
       `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
     ).then((response) => {
       const res = response.data;
-      // console.log(res.results)
+
       dispatch(setMovies(res.results));
     });
   }, [dispatch]);

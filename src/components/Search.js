@@ -43,9 +43,8 @@ const Search = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               ></input>
-              {/* <i className="fa fa-search fa-2x"></i> */}
+        
               <div>
-                {/* <button className="btn btn-info form-btn text-white">Search</button> */}
               </div>
             </div>
           </form>
@@ -55,7 +54,7 @@ const Search = () => {
       {searchMovies.map((movies) => (
         <h2>Title of movie{movies.title}</h2>
       ))}
-      {/* <h1></h1> */}
+   
     </>
   );
 };

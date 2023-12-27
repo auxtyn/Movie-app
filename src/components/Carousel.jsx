@@ -1,10 +1,7 @@
 import React from "react";
-// import { selectBackdrop, setBackdrop } from "../features/movieSlice";
-// import { useDispatch, useSelector } from "react-redux";
-// import axios from "axios";
+
 
 const Carousel = () => {
-  // const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
@@ -25,7 +22,7 @@ const Carousel = () => {
     },
   ];
 
-  // console.log(images[0].backdrop_path);
+
 
   return (
     <>

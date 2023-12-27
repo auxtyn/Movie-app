@@ -25,7 +25,6 @@ const DetailsPage = () => {
 
   let movie = useSelector(selectSingle);
 
-  // console.log(movie)
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
@@ -42,14 +41,6 @@ const DetailsPage = () => {
                   className="w-100 "
                 />
               </div>
-
-              {/* <div className="col-12 col-md-8">
-                <img
-                  src={API_IMG + movie.poster_path}
-                  alt=""
-                  className="w-100 "
-                />
-                </div> */}
 
               <h1>{movie.title}</h1>
               <h2>{movie.vote_average}</h2>
