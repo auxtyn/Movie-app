@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
 import { selectMovies } from "../features/movieSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Carousel = () => {
   let movie = useSelector(selectMovies);
