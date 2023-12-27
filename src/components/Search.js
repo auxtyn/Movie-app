@@ -36,7 +36,7 @@ const Search = () => {
           <form className=" " onSubmit={submitHandler}>
             <div className="input-form">
               <input
-                className="form-control text-center w-50 text-white"
+                className="form-control text-center w-50"
                 placeholder="search movies "
                 name="query"
                 value={query}
