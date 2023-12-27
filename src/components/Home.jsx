@@ -1,6 +1,6 @@
 import axios from "axios";
 import Carousel from "./Carousel";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 // import Hero from "./Hero";
 import { useDispatch } from "react-redux";
 import { setMovies } from "../features/movieSlice";

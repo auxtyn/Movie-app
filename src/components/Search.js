@@ -1,3 +1,4 @@
+import React  from 'react';
 import { selectSearch, setSearch } from "../features/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {} from "react-redux";

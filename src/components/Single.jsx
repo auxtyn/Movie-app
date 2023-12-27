@@ -1,3 +1,4 @@
+import React  from 'react';
 import { useSelector } from "react-redux";
 import { selectSingle, setSingleMovie } from "../features/movieSlice";
 import { useEffect } from "react";
