@@ -52,9 +52,9 @@ const DetailsPage = () => {
                 <h1 className="text-info">{movie.title}</h1>
                 <h2 className='text-warning'>Rating: {movie.vote_average}</h2>
                 <hr></hr>
-                <h2>{movie.overview}</h2>
+                <h3>{movie.overview}</h3>
 
-                <h3 className="text-info">{movie.release_date}</h3>
+                <h3 className="text-info">Release Date: {movie.release_date}</h3>
                 <h3 className="text-warning">{movie.tagline}</h3>
               </div>
 
