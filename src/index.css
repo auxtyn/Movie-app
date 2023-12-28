@@ -17,13 +17,15 @@ a{
 }
 .hero{
   background: linear-gradient(90deg,#181818 10%,hsla(0,0%,9%,.98) 20%,hsla(0,0%,9%,.97) 25%,hsla(0,0%,9%,.95) 35%,hsla(0,0%,9%,.94) 40%,hsla(0,0%,9%,.92) 45%,hsla(0,0%,9%,.9) 50%,hsla(0,0%,9%,.87) 55%,hsla(0,0%,9%,.82) 60%,hsla(0,0%,9%,.75) 65%,hsla(0,0%,9%,.63) 70%,hsla(0,0%,9%,.45) 75%,hsla(0,0%,9%,.27) 80%,hsla(0,0%,9%,.15) 85%,hsla(0,0%,9%,.08) 90%,hsla(0,0%,9%,.03) 95%,hsla(0,0%,9%,0));
+
+ 
 }
 .single-row{
   position: relative;
 }
 .single-parent{
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .carousel-item img {width:300px;
@@ -32,15 +34,26 @@ a{
      object-position: -20% 0;
     }
 
+    .singlee img {width:300px;
+      height: 450px;
+       object-fit: cover;
+        object-position: -20% 0;
+       }
+
 
 
 .single-child{
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+height:calc(100% - 50px)
+  /* width:100% */
+
+
+  /* height: 100%;
   color: #fff;
-  width: 100%;
+  width: 100%; */
 }
 .form input{
   width: 80%;

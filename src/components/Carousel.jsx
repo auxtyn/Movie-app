@@ -1,9 +1,13 @@
 import React from "react";
+  // import {useSelector} from 'react-redux'
+  // import {selectMovies} from '../features/movieSlice'
 
 
 const Carousel = () => {
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
+
+  // const images = useSelector(selectMovies)
 
   const images = [
     {
@@ -103,6 +107,8 @@ const Carousel = () => {
           </button>
         </div>
       </div>
+
+
     </>
   );
 };

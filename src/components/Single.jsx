@@ -1,10 +1,11 @@
-import React  from 'react';
+import React from "react";
 import { useSelector } from "react-redux";
 import { selectSingle, setSingleMovie } from "../features/movieSlice";
 import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
+import Footer from './Footer'
 
 const DetailsPage = () => {
   const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
@@ -24,7 +25,7 @@ const DetailsPage = () => {
   }, [dispatch, id]);
 
   let movie = useSelector(selectSingle);
-
+  console.log(movie)
 
   const API_IMG = "https://image.tmdb.org/t/p/original/";
 
@@ -33,36 +34,38 @@ const DetailsPage = () => {
       {
         <>
           <div className="row single-row mt-5 pt-5 ">
-            <div className="text-white single-parent">
-              <div className="col-4 col-md-12">
+            <div className="text-white single-parent bg-dark">
+              <div className="singlee">
                 <img
                   src={API_IMG + movie.backdrop_path}
                   alt=""
-                  className="w-100 "
+                  className="w-100 d-none d-md-block singlee"
+                />
+                <img
+                  src={API_IMG + movie.poster_path}
+                  alt=""
+                  className="w-100 d-md-none d-sm-block singlee"
                 />
               </div>
 
-              <h1>{movie.title}</h1>
-              <h2>{movie.vote_average}</h2>
+              <div className="header bg-dark container">
+                <h1 className="text-info">{movie.title}</h1>
+                <h2 className='text-warning'>Rating: {movie.vote_average}</h2>
+                <hr></hr>
+                <h2>{movie.overview}</h2>
+
+                <h3 className="text-info">{movie.release_date}</h3>
+                <h3 className="text-warning">{movie.tagline}</h3>
+              </div>
+
               <div className="single-child hero pt-5">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Nostrum libero animi qui possimus repellat facilis illo? Neque
-                  laudantium eum, facilis, dolore quaerat odio vitae molestiae
-                  mollitia exercitationem vel molestias minima quo sapiente.
-                  Nihil quibusdam facere, laborum cupiditate in sunt? Aut
-                  blanditiis vero ratione repellat magnam quam expedita,
-                  suscipit vel soluta beatae inventore commodi! Labore repellat
-                  eaque, cupiditate commodi eum consequatur perferendis nisi
-                  accusantium aperiam maiores, nesciunt atque dicta harum quo
-                  quisquam consectetur? In saepe debitis, doloribus labore
-                  corrupti nulla asperiores beatae perferendis? Dolor qui
-                  tempore fugiat veritatis provident sequi, ea vitae voluptate
-                  aliquam nisi numquam nobis sed modi adipisci quia?
-                </p>
+
+
               </div>
             </div>
           </div>
+          <Footer />
+
         </>
       }
     </>
