@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
-import Footer from './Footer'
+import MovieList from './MovieList'
 
 const DetailsPage = () => {
   const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
@@ -64,7 +64,7 @@ const DetailsPage = () => {
               </div>
             </div>
           </div>
-          <Footer />
+          <MovieList />
 
         </>
       }

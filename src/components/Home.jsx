@@ -8,6 +8,7 @@ import Search from "./Search";
 
 
 
+
 const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
 
 const Home = () => {

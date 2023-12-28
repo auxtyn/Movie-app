@@ -40,6 +40,16 @@ a{
         object-position: -20% 0;
        }
 
+       /* .slick-slider .slick-list, .slick-slider .slick-track {
+        -webkit-transform: translate3d(1,0,0)!important;
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(1,0,0)!important;
+        width: 100%!important;
+        z-index: 2!important;
+    } */
+
 
 
 .single-child{
