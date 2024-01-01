@@ -1,12 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { setRemoveMovie } from "../features/movieSlice";
+// import { setRemoveMovie } from "../features/movieSlice";
 
 const MovieCard = ({ data }) => {
   const API_IMG = "https://image.tmdb.org/t/p/original/";
   const id = data.id;
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // const search = useSelector(selectSearch);
 
