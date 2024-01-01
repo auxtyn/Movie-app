@@ -26,11 +26,11 @@ const MovieCard = ({ data }) => {
         <div className="movie-card">
           <div className="card">
             <Link to={`/single/${id}`}>
-              <img src={API_IMG + data.poster_path} alt={data.title} />
+              <img className="py-0 my-0" src={API_IMG + data.poster_path} alt={data.title} />
 
-              <p>{data.release_date}</p>
-              <h6>{data.title}</h6>
-              <p className="text-warning">Rating:{data.vote_average}</p>
+              <p className="py-0 my-0 mt-3">{data.release_date}</p>
+              <h6 className="py-0 my-0">{data.title}</h6>
+              <p className="text-warning mb-3">Rating:{data.vote_average}</p>
             </Link>
 
             <button

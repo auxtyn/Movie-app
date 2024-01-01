@@ -13,10 +13,10 @@ const ShowCard = ({ show }) => {
         <div className="movie-card">
           <div className="card">
             <Link to={`/single/${id}`}>
-              <img src={API_IMG + show.poster_path} alt={show.title} />
-              <p>{show.first_air_date}</p>
-              <h6>{show.name}</h6>
-              <p className="text-warning">Rating:{show.vote_average}</p>
+              <img className="py-0 my-0" src={API_IMG + show.poster_path} alt={show.title} />
+              <p className="py-0 my-0 mt-3">{show.first_air_date}</p>
+              <h6 className="py-0 my-0">{show.name}</h6>
+              <p className="text-warning py-0 my-0 mb-3">Rating:{show.vote_average}</p>
             </Link>
             
 
