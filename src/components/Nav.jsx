@@ -5,10 +5,10 @@ const Nav = () => {
     <nav className="navbar navbar-expand-lg bg-dark fixed-top py-4 mb-5">
       <div className="container-fluid container">
         <Link className="navbar-brand" to="/">
-          <span className="text-info">FilmSPot</span>
+          <span className="text-warning">FilmSPot</span>
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler bg-warning"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"

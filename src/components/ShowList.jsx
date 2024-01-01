@@ -43,7 +43,7 @@ const ShowList = () => {
 
   return (
     <>
-        <h1>Shows</h1>
+        <h1 className="text-left">Shows</h1>
 
       <Slider {...settings}>
         {shows.map((show, index) => (

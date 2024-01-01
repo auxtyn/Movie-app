@@ -35,6 +35,9 @@ a{
   font-size: 12px;
 
 }
+.card-header h1{
+  text-align: left;
+}
 
 .child p{
   font-size: 10px;
@@ -126,7 +129,7 @@ body {
 }
 
 .navbar-toggler {
-  background-color:#0dcaf0 ;
+  background-color:#ffc107 ;
 }
 .carousel{
   margin-top: 5rem;
