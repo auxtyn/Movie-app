@@ -59,8 +59,9 @@ const Home = () => {
         <Search />
 
         <br></br>
-        <div className="container">
+        <div className="container mb-5">
           <MovieList />
+
 
         </div>
         <div className="container">

@@ -14,8 +14,8 @@ const ShowCard = ({ show }) => {
           <div className="card">
             <Link to={`/single/${id}`}>
               <img src={API_IMG + show.poster_path} alt={show.title} />
-              <p>{show.release_date}</p>
-              <h6>{show.title}</h6>
+              <p>{show.first_air_date}</p>
+              <h6>{show.name}</h6>
               <p className="text-warning">Rating:{show.vote_average}</p>
             </Link>
             
