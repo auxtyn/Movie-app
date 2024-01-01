@@ -1,15 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import MovieCard from "./MovieCard";
-import { selectMovies } from "../features/movieSlice";
+import ShowCard from "./ShowCard";
+import { selectShows } from "../features/movieSlice";
 import Slider from "react-slick";
 
-const MovieList = () => {
-  const movies = useSelector(selectMovies);
+const ShowList = () => {
+  const shows = useSelector(selectShows);
+  console.log(shows)
 
   var settings = {
-    // dots: false,
-    // infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 5,
@@ -44,14 +43,15 @@ const MovieList = () => {
 
   return (
     <>
-    <h1 className="text-left">trending</h1>
+        <h1>Shows</h1>
+
       <Slider {...settings}>
-        {movies.map((movie, index) => (
-          <MovieCard key={index} data={movie} />
+        {shows.map((show, index) => (
+          <ShowCard key={index} show={show} />
         ))}
       </Slider>
     </>
   );
 };
 
-export default MovieList;
+export default ShowList;

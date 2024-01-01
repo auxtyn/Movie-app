@@ -5,7 +5,8 @@ const initialState = {
   search: [],
   singleMovie: [],
   filterMovie: [],
-  backdrop: [],
+  shows: [],
+  // backdrop: [],
 };
 
 const movieSlice = createSlice({
@@ -24,20 +25,24 @@ const movieSlice = createSlice({
     setSearch: (state, action) => {
       state.movies = action.payload;
     },
+    setShows: (state, action) => {
+      state.shows = action.payload;
+    },
     setFilter: (state, action) => {
       state.movies = action.payload;
     },
-    setBackdrop: (state, action) => {
-      state.singleMovie = action.payload;
-    },
+    // setBackdrop: (state, action) => {
+    //   state.singleMovie = action.payload;
+    // },
   },
 });
 
 export const { setMovies } = movieSlice.actions;
 export const { setSearch } = movieSlice.actions;
 export const { setSingleMovie } = movieSlice.actions;
+export const { setShows } = movieSlice.actions;
 export const { setFilter } = movieSlice.actions;
-export const { setBackdrop } = movieSlice.actions;
+// export const { setBackdrop } = movieSlice.actions;
 
 
 // To get all
@@ -48,9 +53,12 @@ export const selectSingle = (state) => state.movies.singleMovie;
 // To get searched
 export const selectSearch = (state) => state.movies.search;
 
+// To get shows
+export const selectShows = (state) => state.movies.shows;
+
 // To get filtered
 export const selectFilter = (state) => state.movies.setFilter;
-export const selectBackdrop = (state) => state.movies.setFilter;
+// export const selectBackdrop = (state) => state.movies.setFilter;
 
 
 export default movieSlice.reducer;

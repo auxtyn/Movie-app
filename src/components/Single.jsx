@@ -33,7 +33,7 @@ const DetailsPage = () => {
     <>
       {
         <>
-          <div className="row single-row mt-5 pt-5 ">
+          <div className="row single-row mt-5 pt-5">
             <div className="text-white single-parent bg-dark">
               <div className="singlee">
                 <img
@@ -64,7 +64,9 @@ const DetailsPage = () => {
               </div>
             </div>
           </div>
+          <div className="container">
           <MovieList />
+          </div>
 
         </>
       }

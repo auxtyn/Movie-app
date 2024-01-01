@@ -42,11 +42,13 @@ const MovieCard = ({ data }) => {
               See more
             </button>
           </div>
-         
         </div>
       </div>
-       {/* Modal  */}
-       <div
+
+   
+
+      {/* Modal  */}
+      {/* <div
             className="modal fade"
             id={`exampleModal${data.id}`}
             tabindex="-1"
@@ -84,8 +86,8 @@ const MovieCard = ({ data }) => {
                 <div className="modal-footer"></div>
               </div>
             </div>
-          </div>
-          {/* Modal  Ends  */}
+          </div> */}
+      {/* Modal  Ends  */}
     </>
   );
 };
