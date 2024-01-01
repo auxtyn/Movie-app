@@ -1,9 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { setRemoveMovie } from "../features/movieSlice";
 
 const MovieCard = ({ data }) => {
   const API_IMG = "https://image.tmdb.org/t/p/original/";
   const id = data.id;
+  const dispatch = useDispatch();
 
   // const search = useSelector(selectSearch);
 
@@ -26,26 +29,34 @@ const MovieCard = ({ data }) => {
         <div className="movie-card">
           <div className="card">
             <Link to={`/single/${id}`}>
-              <img className="py-0 my-0" src={API_IMG + data.poster_path} alt={data.title} />
+              <div className="parent">
+                <img
+                  className="py-0 my-0 "
+                  src={API_IMG + data.poster_path}
+                  alt={data.title}
+                />
 
-              <p className="py-0 my-0 mt-3">{data.release_date}</p>
-              <h6 className="py-0 my-0">{data.title}</h6>
-              <p className="text-warning mb-3">Rating:{data.vote_average}</p>
+                <div className="child">
+                  
+                  <h5 className="py-0 my-0 mt-3 text-white">{data.title}</h5>
+                  <p className="py-0 my-0  text-warning">{data.release_date}</p>
+                  <p className="text-warning mb-3">
+                    Rating:{data.vote_average}
+                  </p>
+                </div>
+              </div>
             </Link>
 
-            <button
+            {/* <button
+              onClick={() => dispatch(setRemoveMovie({ id }))}
               type="button"
               className="btn btn-dark"
-              data-bs-toggle="modal"
-              data-bs-target={`#exampleModal${data.id}`}
             >
-              See more
-            </button>
+              remove
+            </button> */}
           </div>
         </div>
       </div>
-
-   
 
       {/* Modal  */}
       {/* <div

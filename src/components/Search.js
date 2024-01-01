@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from "react";
 import { selectSearch, setSearch } from "../features/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {} from "react-redux";
@@ -43,18 +43,22 @@ const Search = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               ></input>
-        
-              <div>
-              </div>
+
+              <div></div>
             </div>
           </form>
         </div>
       </div>
-
-      {searchMovies.map((movies) => (
-        <h2>Title of movie{movies.title}</h2>
-      ))}
-   
+      <div className="another">
+        {console.log(searchMovies.length)}
+        {searchMovies.map((film) => (
+          <>
+            {" "}
+            <h1>{film.title}</h1>
+            <h1>{film.length}</h1>
+          </>
+        ))}
+      </div>
     </>
   );
 };

@@ -12,11 +12,31 @@ const ShowCard = ({ show }) => {
       <div className=" movie-card-outer">
         <div className="movie-card">
           <div className="card">
-            <Link to={`/single/${id}`}>
+            {/* <Link to={`/single/${id}`}>
               <img className="py-0 my-0" src={API_IMG + show.poster_path} alt={show.title} />
               <p className="py-0 my-0 mt-3">{show.first_air_date}</p>
               <h6 className="py-0 my-0">{show.name}</h6>
               <p className="text-warning py-0 my-0 mb-3">Rating:{show.vote_average}</p>
+            </Link> */}
+
+
+            <Link to={`/single/${id}`}>
+              <div className="parent">
+                <img
+                  className="py-0 my-0 "
+                  src={API_IMG + show.poster_path}
+                  alt={show.name}
+                />
+
+                <div className="child">
+                  
+                  <h5 className="py-0 my-0 mt-3 text-white">{show.name}</h5>
+                  <p className="py-0 my-0  text-warning">{show.first_air_date}</p>
+                  <p className="text-warning mb-3">
+                    Rating:{show.vote_average}
+                  </p>
+                </div>
+              </div>
             </Link>
             
 

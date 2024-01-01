@@ -44,7 +44,7 @@ const MovieList = () => {
 
   return (
     <>
-    <h1 className="text-left">trending</h1>
+    <h1 className="text-left">Trending</h1>
       <Slider {...settings}>
         {movies.map((movie, index) => (
           <MovieCard key={index} data={movie} />

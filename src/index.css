@@ -20,6 +20,17 @@ a{
 
  
 }
+.parent{
+  position: relative;
+
+}
+.child{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0.5, 0.7, 0.9, 0.7);
+  width: 100%;
+}
 .single-row{
   position: relative;
 }

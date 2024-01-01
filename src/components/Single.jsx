@@ -53,9 +53,12 @@ const DetailsPage = () => {
                 <h2 className='text-warning'>Rating: {movie.vote_average}</h2>
                 <hr></hr>
                 <h3>{movie.overview}</h3>
+                <hr />
 
                 <h3 className="text-info">Release Date: {movie.release_date}</h3>
-                <h3 className="text-warning">{movie.tagline}</h3>
+
+                <h3 
+                className="text-warning">{movie.tagline}</h3>
               </div>
 
               <div className="single-child hero pt-5">

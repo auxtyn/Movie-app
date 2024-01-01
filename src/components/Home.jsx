@@ -37,6 +37,8 @@ const Home = () => {
     });
   }, [dispatch]);
 
+  
+
 
   // const deleteMovie = (id) => {
   //   films(movies.filter((movie) => movie.id !== id));

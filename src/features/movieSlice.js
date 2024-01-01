@@ -28,6 +28,10 @@ const movieSlice = createSlice({
     setShows: (state, action) => {
       state.shows = action.payload;
     },
+    setRemoveMovie: (state, action) => {
+      state.movies.filter((film, index) => (film.vote_average >= 7).push(action.payload));
+    },
+
     setFilter: (state, action) => {
       state.movies = action.payload;
     },
@@ -37,13 +41,14 @@ const movieSlice = createSlice({
   },
 });
 
-export const { setMovies } = movieSlice.actions;
-export const { setSearch } = movieSlice.actions;
-export const { setSingleMovie } = movieSlice.actions;
-export const { setShows } = movieSlice.actions;
-export const { setFilter } = movieSlice.actions;
-// export const { setBackdrop } = movieSlice.actions;
-
+export const {
+  setMovies,
+  setSearch,
+  setSingleMovie,
+  setShows,
+  setRemoveMovie,
+  setFilter,
+} = movieSlice.actions;
 
 // To get all
 export const selectMovies = (state) => state.movies.movies;
@@ -55,10 +60,11 @@ export const selectSearch = (state) => state.movies.search;
 
 // To get shows
 export const selectShows = (state) => state.movies.shows;
+// To get shows
+export const selectRemoveMovie = (state) => state.movies.shows;
 
 // To get filtered
 export const selectFilter = (state) => state.movies.setFilter;
 // export const selectBackdrop = (state) => state.movies.setFilter;
-
 
 export default movieSlice.reducer;
