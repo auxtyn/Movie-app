@@ -38,7 +38,7 @@ const MovieCard = ({ data }) => {
 
                 <div className="child">
                   
-                  <h5 className="py-0 my-0 mt-3 text-white">{data.title}</h5>
+                  <h6 className="py-0 my-0 mt-3 text-white">{data.title}</h6>
                   <p className="py-0 my-0  text-warning">{data.release_date}</p>
                   <p className="text-warning mb-3">
                     Rating:{data.vote_average}

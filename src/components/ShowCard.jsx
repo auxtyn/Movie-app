@@ -30,7 +30,7 @@ const ShowCard = ({ show }) => {
 
                 <div className="child">
                   
-                  <h5 className="py-0 my-0 mt-3 text-white">{show.name}</h5>
+                  <h6 className="py-0 my-0 mt-3 text-white">{show.name}</h6>
                   <p className="py-0 my-0  text-warning">{show.first_air_date}</p>
                   <p className="text-warning mb-3">
                     Rating:{show.vote_average}
