@@ -61,12 +61,12 @@ const Home = () => {
         <Search />
 
         <br></br>
-        <div className="container mb-5 text-warning card-header" >
+        <div className="ml-2 container mb-5 text-warning card-header" >
           <MovieList />
 
 
         </div>
-        <div className="container text-warning">
+        <div className="ml-2 container text-warning card-header">
           <ShowList />
 
         </div>

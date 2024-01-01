@@ -37,6 +37,7 @@ a{
 }
 .card-header h1{
   text-align: left;
+  margin-left: 10px;
 }
 
 .child p{
