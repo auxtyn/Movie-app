@@ -10,13 +10,13 @@ const Search = () => {
   const dispatch = useDispatch();
 
   const searchMovies = useSelector(selectSearch);
-  console.log(searchMovies);
+  // console.log(searchMovies);
 
   const [query, setQuery] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(query);
+    // console.log(query);
     setQuery(query);
   };
 
@@ -25,7 +25,7 @@ const Search = () => {
       `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1&region=harry&api_key=${API_KEY}`
     ).then((response) => {
       const res = response.data;
-      console.log(res.results);
+      // console.log(res.results);
       dispatch(setSearch(res.results));
     });
   }, [dispatch, query]);
@@ -50,7 +50,7 @@ const Search = () => {
         </div>
       </div>
       <div className="another">
-        {console.log(searchMovies.length)}
+        {/* {console.log(searchMovies.length)} */}
         {searchMovies.map((film) => (
           <>
             {" "}

@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 const ShowList = () => {
   const shows = useSelector(selectShows);
-  console.log(shows)
+  // console.log(shows)
 
   var settings = {
     speed: 500,
