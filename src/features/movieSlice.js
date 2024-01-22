@@ -53,7 +53,7 @@ export const {
 // To get all
 export const selectMovies = (state) => state.movies.movies;
 // To get single
-export const selectSingle = (state) => state.movies.singleMovie;
+export const selectSingleMovie = (state) => state.movies.singleMovie;
 
 // To get searched
 export const selectSearch = (state) => state.movies.search;

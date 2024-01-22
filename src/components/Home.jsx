@@ -20,7 +20,6 @@ const Home = () => {
       `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
     ).then((response) => {
       const res = response.data;
-
       dispatch(setMovies(res.results));
     });
   }, [dispatch]);
@@ -29,7 +28,7 @@ const Home = () => {
 
   useEffect(() => {
     axios(
-      // https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc
+      
       `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}`
     ).then((response) => {
       const res = response.data;
