@@ -16,8 +16,9 @@ export const YouTubeVideo = () => {
     axios(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=32434d8aedd8cdecaf3b72ebaca02f48&language=en-US`
     ).then((response) => {
-      setVideo(response.data.results[1].key);
-      console.log(response.data.results[1].key);
+      const res = response.data.results;
+      res[1].key ? setVideo(res[1].key) : setVideo("Qhnmsi0jwcA");
+      console.log(res)
     });
   }, [id]);
   return (
@@ -62,26 +63,15 @@ const DetailsPage = () => {
         <>
           <div className="single-row mt-5 pt-5">
             <YouTubeVideo />
-
             <div className="text-white single-parent bg-dark">
               <div className="row">
                 <div className="col-md-6">
                   <div className="singlee">
                     <img
-                      // src={
-                      //   movie.backdrop_path >= 1
-                      //     ? API_IMG + movie.backdrop_path
-                      //     : API_IMG + movie.poster_path
-                      // }
                       src={API_IMG + movie.backdrop_path}
                       alt=""
                       className="w-100 d-none d-md-block singlee"
                     />
-                    {/* <img
-                      src={API_IMG + movie.poster_path}
-                      alt=""
-                      className="w-100 d-md-none d-sm-block singlee"
-                    /> */}
                   </div>
                 </div>
                 <div className="col-md-6">

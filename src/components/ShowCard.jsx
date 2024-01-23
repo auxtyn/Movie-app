@@ -5,7 +5,6 @@ const ShowCard = ({ show }) => {
   const API_IMG = "https://image.tmdb.org/t/p/original/";
   const id = show.id;
 
-
   return (
     <>
       {/* <div className=" movie-card-outer col-6 col-md-3 "> */}
@@ -19,26 +18,34 @@ const ShowCard = ({ show }) => {
               <p className="text-warning py-0 my-0 mb-3">Rating:{show.vote_average}</p>
             </Link> */}
 
-
             <Link to={`/single/${id}`}>
               <div className="parent">
                 <img
-                  className="py-0 my-0 "
-                  src={API_IMG + show.poster_path}
-                  alt={show.name}
+                  className="py-0 my-0 w-100"
+                  src={
+                    show.poster_path
+                      ? API_IMG + show.poster_path
+                      : `images/placeholder-image.jpg`
+                  }
+                  alt={show.title}
                 />
+                {/* <img
+                  className="w-100"
+                  src="images/placeholder-image.jpg"
+                  alt=""
+                /> */}
 
                 <div className="child">
-                  
                   <h6 className="py-0 my-0 mt-3 text-white">{show.name}</h6>
-                  <p className="py-0 my-0  text-warning">{show.first_air_date}</p>
+                  <p className="py-0 my-0  text-warning">
+                    {show.first_air_date}
+                  </p>
                   <p className="text-warning mb-3">
                     Rating:{show.vote_average}
                   </p>
                 </div>
               </div>
             </Link>
-            
 
             {/* <button
               type="button"
@@ -51,10 +58,6 @@ const ShowCard = ({ show }) => {
           </div>
         </div>
       </div>
-
-   
-
-     
     </>
   );
 };

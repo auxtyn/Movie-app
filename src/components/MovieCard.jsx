@@ -31,13 +31,16 @@ const MovieCard = ({ data }) => {
             <Link to={`/single/${id}`}>
               <div className="parent">
                 <img
-                  className="py-0 my-0 "
-                  src={API_IMG + data.poster_path}
+                  className="py-0 my-0"
+                  src={
+                    data.poster_path 
+                      ? API_IMG + data.poster_path
+                      : API_IMG + data.backdrop_path
+                  }
                   alt={data.title}
                 />
 
                 <div className="child">
-                  
                   <h6 className="py-0 my-0 mt-3 text-white">{data.title}</h6>
                   <p className="py-0 my-0  text-warning">{data.release_date}</p>
                   <p className="text-warning mb-3">

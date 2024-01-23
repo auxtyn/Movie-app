@@ -44,11 +44,13 @@ const MovieList = () => {
 
   return (
     <>
-    <h1 className="text-left">Trending</h1>
+      <h1 className="text-left">Trending</h1>
       <Slider {...settings}>
-        {movies.map((movie, index) => (
-          <MovieCard key={index} data={movie} />
-        ))}
+        {movies.length >= 1 ? (
+          movies.map((movie, index) => <MovieCard key={index} data={movie} />)
+        ) : (
+          <h3 className="text-center">No film oo </h3>
+        )}
       </Slider>
     </>
   );
