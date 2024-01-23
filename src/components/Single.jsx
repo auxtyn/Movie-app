@@ -13,9 +13,9 @@ export const YouTubeVideo = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios(
+    axios async(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=32434d8aedd8cdecaf3b72ebaca02f48&language=en-US`
-    ).then((response) => {
+    )await.then((response) => {
       const res = response.data.results;
       setVideo(res[1]?.key);
     });
