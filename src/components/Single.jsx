@@ -68,7 +68,7 @@ const DetailsPage = () => {
     <>
       {
         <>
-          <div className="single-row mt-5 pt-5">
+          <div className="single-row mt-3 pt-5">
             <YouTubeVideo />
             <div className="text-white single-parent bg-dark">
               <div className="row">
