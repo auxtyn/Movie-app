@@ -57,7 +57,7 @@ const Home = () => {
       }
     };
     fetchMovies();
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     axios(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}`).then(

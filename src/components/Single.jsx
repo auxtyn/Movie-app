@@ -11,13 +11,21 @@ import MovieList from "./MovieList";
 export const YouTubeVideo = () => {
   const [video, setVideo] = useState("");
   const { id } = useParams();
+  const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
 
   useEffect(() => {
     axios(
-      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=32434d8aedd8cdecaf3b72ebaca02f48&language=en-US`
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`
     ).then((response) => {
       const res = response.data.results;
-      setVideo(res[1]?.key);
+
+      if (res.length > 0) {
+      const result = res.length - 1;
+      // console.log(result)
+
+      setVideo(res[result].key)
+      }
+      else{console.log('no key')}   
     });
   }, [id]);
   return (

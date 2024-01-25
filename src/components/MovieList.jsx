@@ -45,13 +45,15 @@ const MovieList = () => {
   return (
     <>
       <h1 className="text-left">Trending</h1>
-      <Slider {...settings}>
-        {movies.length >= 1 ? (
-          movies.map((movie, index) => <MovieCard key={index} data={movie} />)
-        ) : (
-          <h3>Loading movies...</h3>
-        )}
-      </Slider>
+      {movies.length >= 1 ? (
+        <Slider {...settings}>
+          {movies.map((movie, index) => (
+            <MovieCard key={index} data={movie} />
+          ))}
+        </Slider>
+      ) : (
+        <h3>Loading movies...</h3>
+      )}
     </>
   );
 };
