@@ -13,7 +13,7 @@ export const YouTubeVideo = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios (
+    axios(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=32434d8aedd8cdecaf3b72ebaca02f48&language=en-US`
     ).then((response) => {
       const res = response.data.results;
@@ -76,15 +76,11 @@ const DetailsPage = () => {
                 <div className="col-md-6">
                   <div className="header bg-dark mt-3 container">
                     <h1 className="text-info ">{movie.title}</h1>
-                    <h5 className="text-warning">
-                      {movie.release_date}
-                    </h5>
+                    <h5 className="text-warning">{movie.release_date}</h5>
                     <hr></hr>
                     <h6>{movie.overview}</h6>
                     <hr />
-                    <h6 className="text-info ">
-                      Rating: {movie.vote_average}
-                    </h6>
+                    <h6 className="text-info ">Rating: {movie.vote_average}</h6>
 
                     <h6 className="text-warning">{movie.tagline}</h6>
                   </div>

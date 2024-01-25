@@ -49,7 +49,7 @@ const MovieList = () => {
         {movies.length >= 1 ? (
           movies.map((movie, index) => <MovieCard key={index} data={movie} />)
         ) : (
-          <h3 className="text-center">No film oo </h3>
+          <h3>Loading movies...</h3>
         )}
       </Slider>
     </>

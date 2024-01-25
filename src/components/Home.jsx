@@ -8,23 +8,56 @@ import Search from "./Search";
 import ShowList from "./ShowList";
 // import { useParams } from "react-router";
 
+// useEffect(() => {
+//   const fetchData = async () => {
+//     try {
+//       const response = await axios.get('https://api.example.com/data');
+//       setData(response.data);
+//     } catch (error) {
+//       console.error('Error fetching data:', error);
+//     }
+//   };
+
+//   fetchData();
+// }, []);
+// return (
+//   <div>
+//     {data ? (
+//       <p>{data}</p>
+//     ) : (
+//       <p>Loading...</p>
+//     )}
+//   </div>
+// );
 
 const API_KEY = "32434d8aedd8cdecaf3b72ebaca02f48";
-
 
 const Home = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    axios(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
-    ).then((response) => {
-      const res = response.data;
-      dispatch(setMovies(res.results));
-    });
-  }, [dispatch]);
+  //  const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('https://api.example.com/data');
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
 
- 
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
+        );
+        const res = response.data;
+        dispatch(setMovies(res.results));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchMovies();
+  }, [dispatch]);
 
   useEffect(() => {
     axios(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}`).then(
