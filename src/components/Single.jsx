@@ -6,7 +6,6 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import MovieList from "./MovieList";
-// import ShowList from "./ShowList";
 
 export const YouTubeVideo = () => {
   const [video, setVideo] = useState("");

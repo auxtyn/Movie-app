@@ -45,13 +45,15 @@ const ShowList = () => {
     <>
       <h1 className="text-left">Shows</h1>
 
-      <Slider {...settings}>
-        {shows.length >=1 ? (
-          shows.map((show, index) => <ShowCard key={index} show={show} />)
-        ) : (
-          <h3>Loading shows...</h3>
-        )}
-      </Slider>
+      {shows.length >= 1 ? (
+        <Slider {...settings}>
+          {shows.map((show, index) => (
+            <ShowCard key={index} show={show} />
+          ))}
+        </Slider>
+      ) : (
+        <h3>Loading shows...</h3>
+      )}
     </>
   );
 };
