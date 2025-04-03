@@ -44,10 +44,9 @@ const Home = () => {
   //     }
   //   };
 
-  useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(
+        const response = await axios(
           `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
         );
         const res = response.data;
@@ -56,17 +55,18 @@ const Home = () => {
         console.error("Error fetching data:", error);
       }
     };
-    fetchMovies();
-  }, []);
-
   useEffect(() => {
+    fetchMovies();
+  }, [dispatch]);
+
     axios(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}`).then(
       (response) => {
         const res = response.data;
 
-        dispatch(setShows(res.results));
       }
     );
+  useEffect(() => {
+        dispatch(setShows(res.results));
   }, [dispatch]);
 
   // const deleteMovie = (id) => {
