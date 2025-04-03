@@ -45,7 +45,7 @@ const MovieList = () => {
   return (
     <>
       <h1 className="text-left">Trending</h1>
-      {movies.length >= 1 ? (
+      {movies && movies.length >= 1 ? (
         <Slider {...settings}>
           {movies.map((movie, index) => (
             <MovieCard key={index} data={movie} />
