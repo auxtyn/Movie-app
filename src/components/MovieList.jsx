@@ -52,7 +52,7 @@ const MovieList = () => {
           ))}
         </Slider>
       ) : (
-        <h3>Loading movies...</h3>
+        <p>Loading movies...</p>
       )}
     </>
   );
